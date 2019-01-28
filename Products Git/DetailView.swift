@@ -377,6 +377,10 @@ class DetailView: UIViewController, UIImagePickerControllerDelegate, UINavigatio
         }
     }
     
+    func textViewDidChange(_ textView: UITextView) {
+        product.description = descriptionTextView.text
+    }
+    
     func textViewDidEndEditing(_ textView: UITextView) {
         if descriptionTextView.text.isEmpty {
             descriptionTextView.text = "Description..."
